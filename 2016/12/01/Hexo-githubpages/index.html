@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="linux,ubuntu,redhat," />
+  <meta name="keywords" content="hexo," />
 
 
 
@@ -84,16 +84,37 @@
 
 
 
-<meta name="description" content="猜猜我是谁么么哒，我去尿个尿，然后出发哦！">
+<meta name="description" content="#Hexo+github pages
+##目录
+
+hexo安装及初始化
+github pages绑定域名
+上传到github
+修改主题
+参考">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello">
-<meta property="og:url" content="http://zhaoa.tk/2016/12/01/Hello/index.html">
+<meta property="og:title" content="Hexo+githubpages">
+<meta property="og:url" content="http://zhaoa.tk/2016/12/01/Hexo-githubpages/index.html">
 <meta property="og:site_name" content="WalterZhao">
-<meta property="og:description" content="猜猜我是谁么么哒，我去尿个尿，然后出发哦！">
-<meta property="og:updated_time" content="2016-12-01T11:43:56.000Z">
+<meta property="og:description" content="#Hexo+github pages
+##目录
+
+hexo安装及初始化
+github pages绑定域名
+上传到github
+修改主题
+参考">
+<meta property="og:updated_time" content="2016-12-01T15:51:29.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello">
-<meta name="twitter:description" content="猜猜我是谁么么哒，我去尿个尿，然后出发哦！">
+<meta name="twitter:title" content="Hexo+githubpages">
+<meta name="twitter:description" content="#Hexo+github pages
+##目录
+
+hexo安装及初始化
+github pages绑定域名
+上传到github
+修改主题
+参考">
 
 
 
@@ -121,13 +142,13 @@
 
 
 
-  <link rel="canonical" href="http://zhaoa.tk/2016/12/01/Hello/"/>
+  <link rel="canonical" href="http://zhaoa.tk/2016/12/01/Hexo-githubpages/"/>
 
 
 
 
 
-  <title> Hello | WalterZhao </title>
+  <title> Hexo+githubpages | WalterZhao </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -291,7 +312,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://zhaoa.tk/2016/12/01/Hello/">
+  <link itemprop="mainEntityOfPage" href="http://zhaoa.tk/2016/12/01/Hexo-githubpages/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="zhaoA">
@@ -315,7 +336,7 @@
             
             
               
-                Hello
+                Hexo+githubpages
               
             
           </h1>
@@ -328,7 +349,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-12-01T15:11:15+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-12-01T23:45:11+08:00">
                 2016-12-01
               </time>
             
@@ -347,8 +368,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/blog/" itemprop="url" rel="index">
-                    <span itemprop="name">blog</span>
+                  <a href="/categories/软件安装/" itemprop="url" rel="index">
+                    <span itemprop="name">软件安装</span>
                   </a>
                 </span>
 
@@ -362,8 +383,8 @@
             
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
-                <a href="/2016/12/01/Hello/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/01/Hello/" itemprop="commentCount"></span>
+                <a href="/2016/12/01/Hexo-githubpages/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/01/Hexo-githubpages/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -389,7 +410,52 @@
       
 
       
-        <h1 id="猜猜我是谁"><a href="#猜猜我是谁" class="headerlink" title="猜猜我是谁"></a>猜猜我是谁</h1><p>么么哒，我去尿个尿，然后出发哦！</p>
+        <p>#Hexo+github pages</p>
+<p>##目录</p>
+<ol>
+<li>hexo安装及初始化</li>
+<li>github pages绑定域名</li>
+<li>上传到github</li>
+<li>修改主题</li>
+<li>参考</li>
+</ol>
+<a id="more"></a>
+<p>##1.Hexo安装及初始化<br>安装hexo之前需要安装node.js，具体安装步骤见<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="external">hexo安装</a>。</p>
+<pre><code>$ npm install -g hexo-cli
+</code></pre><p>然后进行初始化</p>
+<pre><code>$ hexo init &lt;folder&gt;
+$ cd &lt;folder&gt;
+$ npm install ##目的安装相应依赖项
+</code></pre><p>新建完成后，指定文件夹的目录如下：</p>
+<pre><code>.
+├── _config.yml
+├── package.json
+├── scaffolds
+├── source
+|   ├── _drafts
+|   └── _posts
+└── themes
+</code></pre><p><strong>_config.yml</strong>：网站的 配置 信息，您可以在此配置大部分的参数。<br><strong>package.json</strong>：应用程序的信息。EJS, Stylus 和 Markdown renderer 已默认安装，可以自由移除<br><strong>scaffolds</strong>：模版 文件夹。当新建文章时，Hexo 会根据 scaffold 来建立文件。<br><strong>source</strong>：资源文件夹是存放用户资源的地方。除 <em>posts 文件夹之外，开头命名为 </em> (下划线)的文件 / 文件夹和隐藏的文件将会被忽略。Markdown 和 HTML 文件会被解析并放到 public 文件夹，而其他文件会被拷贝过去。<br><strong>themes</strong>：主题 文件夹。Hexo 会根据主题来生成静态页面。</p>
+<p>##2.github pages绑定域名</p>
+<p>####2.1申请免费域名<br><a href="http://www.dot.tk/zh/index.html" target="_blank" rel="external">dot_tk</a>是一个免费申请.tk域名的网站。<br><a href="https://www.dnspod.cn/" target="_blank" rel="external">DNSPod-免费智能DNS解析服务商</a>提供免费dns解析<br><a href="http://jingyan.baidu.com/article/adc81513515998f723bf73be.html" target="_blank" rel="external">TK域名免费注册及解析详细教程_百度经验</a><br><a href="http://www.cnblogs.com/scplee/p/5533292.html" target="_blank" rel="external">利用GitHub Pages和Hexo搭建个人博客</a></p>
+<p>####2.2域名绑定github pages<br>在终端ping你的github pages主页，得到ip地址。然后在source文件夹下新建CNAME文件，文件中只有一行信息“你的域名“（不包含开头的www）。</p>
+<p>##3.上传到github</p>
+<p>先安装 hexo-deployer-git</p>
+<pre><code>$ npm install hexo-deployer-git --save
+</code></pre><p>修改配置</p>
+<pre><code>deploy:
+   type: git
+   repo: &lt;repository url&gt;(仓库地址)
+  branch: [branch](分支，一般是master)
+   message: [message]
+</code></pre><p>  随后可以通过一下命令操作hexo了，参考<a href="https://hexo.io/zh-cn/docs/commands.html" target="_blank" rel="external">命令</a></p>
+<pre><code>$ hexo new &lt;filename&gt; #根据模板生成md文件，在source/_post目录下
+$ hexo generate #生成静态文件
+$ hexo server #通过localhost:4000可以预览网页
+$ hexo deploy #发布到github上
+</code></pre><p>##4.修改主题</p>
+<p>hexo默认的模板是<strong>landspace</strong>，在themes文件夹下。<a href="https://hexo.io/themes/" target="_blank" rel="external">主题</a>中的<a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="external">next</a>是一个不错的模板，可以参照它的说明进行设置。</p>
+<p>##5.参考<br><a href="http://www.jianshu.com/p/834d7cc0668d" target="_blank" rel="external">我的博客是如何搭建的（github pages + HEXO + 域名绑定）</a><br><a href="http://www.jianshu.com/p/35e197cb1273" target="_blank" rel="external">Hexo搭建Github-Pages博客填坑教程</a></p>
 
       
     </div>
@@ -413,11 +479,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/linux/" rel="tag"># linux</a>
-          
-            <a href="/tags/ubuntu/" rel="tag"># ubuntu</a>
-          
-            <a href="/tags/redhat/" rel="tag"># redhat</a>
+            <a href="/tags/hexo/" rel="tag"># hexo</a>
           
         </div>
       
@@ -426,14 +488,18 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2016/12/01/jekyll/" rel="next" title="jekyll">
+                <i class="fa fa-chevron-left"></i> jekyll
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/12/01/jekyll/" rel="prev" title="jekyll">
-                jekyll <i class="fa fa-chevron-right"></i>
+              <a href="/2016/12/01/opengrok-install/" rel="prev" title="opengrok_install">
+                opengrok_install <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -460,8 +526,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/12/01/Hello/"
-           data-title="Hello" data-url="http://zhaoa.tk/2016/12/01/Hello/">
+      <div class="ds-thread" data-thread-key="2016/12/01/Hexo-githubpages/"
+           data-title="Hexo+githubpages" data-url="http://zhaoa.tk/2016/12/01/Hexo-githubpages/">
       </div>
     
   </div>
@@ -485,17 +551,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/uploads/avatar.png"
@@ -514,7 +571,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">1</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -523,7 +580,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -548,22 +605,6 @@
 
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#猜猜我是谁"><span class="nav-number">1.</span> <span class="nav-text">猜猜我是谁</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
     </div>
