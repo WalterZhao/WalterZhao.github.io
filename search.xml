@@ -5,7 +5,7 @@
     <entry>
       <title><![CDATA[opengrok_install]]></title>
       <url>%2F2016%2F12%2F01%2Fopengrok-install%2F</url>
-      <content type="text"><![CDATA[OpenGrok 安装 启动路径默认希望bin所在目录：/var/opengrok DATA_ROOT默认的生成的索引列表存储的目录：/var/opengrok/data SRC_ROOT默认的源代码目录：/var/opengrok/src 2 自定义安装需要修改opengrok/bin/opengrok脚本中的一些变量的值，如：OPENGROK_INSTANCE_BASE=”/home/zhaoa/software/opengrok-0.12.1.6”EXUBERANT_CTAGS=”/usr/bin/ctags”还有放入Tomcat中的source.war目录中的web.xml（在子目录WEB-INF）中的 CONFIGURATION /var/opengrok/etc/configuration.xml Full path to the configuration file where OpenGrok can read it’s configuration 其中黑色部分改为实际所在目录]]></content>
+      <content type="text"><![CDATA[启动路径默认希望bin所在目录：/var/opengrok DATA_ROOT默认的生成的索引列表存储的目录：/var/opengrok/data SRC_ROOT默认的源代码目录：/var/opengrok/src 2 自定义安装需要修改opengrok/bin/opengrok脚本中的一些变量的值，如：OPENGROK_INSTANCE_BASE=”/home/zhaoa/software/opengrok-0.12.1.6”EXUBERANT_CTAGS=”/usr/bin/ctags”还有放入Tomcat中的source.war目录中的web.xml（在子目录WEB-INF）中的 CONFIGURATION /var/opengrok/etc/configuration.xml Full path to the configuration file where OpenGrok can read it’s configuration 其中黑色部分改为实际所在目录]]></content>
     </entry>
 
     

@@ -394,14 +394,15 @@
 
       
         
-          <h1 id="OpenGrok-安装"><a href="#OpenGrok-安装" class="headerlink" title="OpenGrok 安装"></a>OpenGrok 安装</h1>
-          <!--noindex-->
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/12/01/opengrok-install/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+          
+            <a id="more"></a>
+<h3 id="启动路径"><a href="#启动路径" class="headerlink" title="启动路径"></a>启动路径</h3><p>默认希望bin所在目录：/var/opengrok</p>
+<h3 id="DATA-ROOT"><a href="#DATA-ROOT" class="headerlink" title="DATA_ROOT"></a>DATA_ROOT</h3><p>默认的生成的索引列表存储的目录：/var/opengrok/data</p>
+<h3 id="SRC-ROOT"><a href="#SRC-ROOT" class="headerlink" title="SRC_ROOT"></a>SRC_ROOT</h3><p>默认的源代码目录：/var/opengrok/src</p>
+<h2 id="2-自定义安装"><a href="#2-自定义安装" class="headerlink" title="2 自定义安装"></a>2 自定义安装</h2><p>需要修改opengrok/bin/opengrok脚本中的一些变量的值，如：<br>OPENGROK_INSTANCE_BASE=”/home/zhaoa/software/opengrok-0.12.1.6”<br>EXUBERANT_CTAGS=”/usr/bin/ctags”<br>还有放入Tomcat中的source.war目录中的web.xml（在子目录WEB-INF）中的</p>
+<p><context-param><br>    <param-name>CONFIGURATION</param-name><br>    <param-value>/<strong>var/opengrok</strong>/etc/configuration.xml</param-value><br>    <description>Full path to the configuration file where OpenGrok can read it’s configuration</description><br>  </context-param><br>  其中黑色部分改为实际所在目录</p>
+
+          
         
       
     </div>
