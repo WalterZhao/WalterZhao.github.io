@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+    
+    <entry>
+      <title><![CDATA[Hello World]]></title>
+      <url>%2F2016%2F12%2F01%2Fhello-world%2F</url>
+      <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[jekyll]]></title>
+      <url>%2F2016%2F12%2F01%2Fjekyll%2F</url>
+      <content type="text"><![CDATA[ubuntu14.04安装Jekyll目录 系统版本 安装ruby 安装jekyll 参考 系统版本$ cat /etc/issue Ubuntu 14.04.4 LTS \n \l $ uname -a Linux ubuntu 4.2.0-27-generic #32~14.04.1-Ubuntu SMP Fri Jan 22 15:32:26 UTC 2016 x86_64 x86_64 x86_64 GNU/Linux 安装rubyruby在ubuntu下默认不安装的，可以有两种方式安装。 1 使用ubuntu系统软件安装命令$sudo apt-get install ruby 但该命令安装的ruby版本相对较老，而是1.9版本，而2.0以后版本才可以使用Jekyll3。 2 使用ruby版本管理器rvm安装。首先需要安装gem（用apt-get）$ gem sources --remove https://rubygems.org/ $ gem sources --remove http://rubygems.org/ $ gem sources -a https://ruby.taobao.org/ $ gem sources -l \*** CURRENT SOURCES *** https://ruby.taobao.org # 请确保只有 ruby.taobao.org，这是一个比较快的镜像 安装rvm和ruby$ sudo apt-get install curl $ sudo gem install rvm $ rvm -v $ \curl -sSL https://get.rvm.io | bash $ source /home/user/.rvm/scripts/rvm $ rvm install ruby-2.3.3 $ rvm use ruby-2.3.3 $ rvm -v 安装ruby前可以通过rvm list known查看可安装版本，选择较新的版本。安装ruby可能会出现问题问题，主要原因是 Ruby Rvm apt-get update 错误，错误代码： Error running &apos;requirements_debian_update_system ruby-2.3.3&apos;... 解决方法：在运行rvm install 2.3.3之前先运行rvm autolibs disable 安装Jekyll安装js runtime$ sudo apt-get install nodejs $ gem install execjs ###安装jekyll $gem install jekyll $jekyll -v $ gem install rdiscount 此处默认安装的是jekyll3版本，此版本需要ruby2.0.0以上版本。Jekyll默认的markdown解析器maruku对中文支持不够完善，换成RDiscount解析器。 参考ubuntu 12.04安装jekyll在github上写博客使用 GitHub, Jekyll 打造自己的独立博客]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[Hello]]></title>
+      <url>%2F2016%2F12%2F01%2FHello%2F</url>
+      <content type="text"><![CDATA[猜猜我是谁么么哒，我去尿个尿，然后出发哦！]]></content>
+    </entry>
+
+    
+  
+  
+</search>
