@@ -84,25 +84,16 @@
 
 
 
-<meta name="description" content="启动路径默认希望bin所在目录：/var/opengrok
-DATA_ROOT默认的生成的索引列表存储的目录：/var/opengrok/data
-SRC_ROOT默认的源代码目录：/var/opengrok/src
-2 自定义安装需要修改opengrok/bin/opengrok脚本中的一些变量的值，如：OPENGROK_INSTANCE_BASE=”/home/zhaoa/software/">
+<meta name="description" content="OpenGrok是一个快速、便于使用的源代码搜索与对照引擎。它帮助你搜索，对照，定位你的源代码树。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="opengrok_install">
 <meta property="og:url" content="http://zhaoa.tk/2016/12/01/opengrok-install/index.html">
 <meta property="og:site_name" content="WalterZhao">
-<meta property="og:description" content="启动路径默认希望bin所在目录：/var/opengrok
-DATA_ROOT默认的生成的索引列表存储的目录：/var/opengrok/data
-SRC_ROOT默认的源代码目录：/var/opengrok/src
-2 自定义安装需要修改opengrok/bin/opengrok脚本中的一些变量的值，如：OPENGROK_INSTANCE_BASE=”/home/zhaoa/software/">
-<meta property="og:updated_time" content="2016-12-01T16:01:31.000Z">
+<meta property="og:description" content="OpenGrok是一个快速、便于使用的源代码搜索与对照引擎。它帮助你搜索，对照，定位你的源代码树。">
+<meta property="og:updated_time" content="2016-12-02T03:27:47.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="opengrok_install">
-<meta name="twitter:description" content="启动路径默认希望bin所在目录：/var/opengrok
-DATA_ROOT默认的生成的索引列表存储的目录：/var/opengrok/data
-SRC_ROOT默认的源代码目录：/var/opengrok/src
-2 自定义安装需要修改opengrok/bin/opengrok脚本中的一些变量的值，如：OPENGROK_INSTANCE_BASE=”/home/zhaoa/software/">
+<meta name="twitter:description" content="OpenGrok是一个快速、便于使用的源代码搜索与对照引擎。它帮助你搜索，对照，定位你的源代码树。">
 
 
 
@@ -398,11 +389,12 @@ SRC_ROOT默认的源代码目录：/var/opengrok/src
       
 
       
-        <a id="more"></a>
+        <p>OpenGrok是一个快速、便于使用的源代码搜索与对照引擎。它帮助你搜索，对照，定位你的源代码树。</p>
+<a id="more"></a>
 <h3 id="启动路径"><a href="#启动路径" class="headerlink" title="启动路径"></a>启动路径</h3><p>默认希望bin所在目录：/var/opengrok</p>
 <h3 id="DATA-ROOT"><a href="#DATA-ROOT" class="headerlink" title="DATA_ROOT"></a>DATA_ROOT</h3><p>默认的生成的索引列表存储的目录：/var/opengrok/data</p>
 <h3 id="SRC-ROOT"><a href="#SRC-ROOT" class="headerlink" title="SRC_ROOT"></a>SRC_ROOT</h3><p>默认的源代码目录：/var/opengrok/src</p>
-<h2 id="2-自定义安装"><a href="#2-自定义安装" class="headerlink" title="2 自定义安装"></a>2 自定义安装</h2><p>需要修改opengrok/bin/opengrok脚本中的一些变量的值，如：<br>OPENGROK_INSTANCE_BASE=”/home/zhaoa/software/opengrok-0.12.1.6”<br>EXUBERANT_CTAGS=”/usr/bin/ctags”<br>还有放入Tomcat中的source.war目录中的web.xml（在子目录WEB-INF）中的</p>
+<h3 id="自定义安装"><a href="#自定义安装" class="headerlink" title="自定义安装"></a>自定义安装</h3><p>需要修改opengrok/bin/opengrok脚本中的一些变量的值，如：<br>OPENGROK_INSTANCE_BASE=”/home/zhaoa/software/opengrok-0.12.1.6”<br>EXUBERANT_CTAGS=”/usr/bin/ctags”<br>还有放入Tomcat中的source.war目录中的web.xml（在子目录WEB-INF）中的</p>
 <p><context-param><br>    <param-name>CONFIGURATION</param-name><br>    <param-value>/<strong>var/opengrok</strong>/etc/configuration.xml</param-value><br>    <description>Full path to the configuration file where OpenGrok can read it’s configuration</description><br>  </context-param><br>  其中黑色部分改为实际所在目录</p>
 
       
@@ -568,7 +560,7 @@ SRC_ROOT默认的源代码目录：/var/opengrok/src
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#启动路径"><span class="nav-number">1.</span> <span class="nav-text">启动路径</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DATA-ROOT"><span class="nav-number">2.</span> <span class="nav-text">DATA_ROOT</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SRC-ROOT"><span class="nav-number">3.</span> <span class="nav-text">SRC_ROOT</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-自定义安装"><span class="nav-number"></span> <span class="nav-text">2 自定义安装</span></a></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#启动路径"><span class="nav-number">1.</span> <span class="nav-text">启动路径</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DATA-ROOT"><span class="nav-number">2.</span> <span class="nav-text">DATA_ROOT</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SRC-ROOT"><span class="nav-number">3.</span> <span class="nav-text">SRC_ROOT</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#自定义安装"><span class="nav-number">4.</span> <span class="nav-text">自定义安装</span></a></li></ol></div>
             
 
           </div>
