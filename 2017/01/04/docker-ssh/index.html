@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="jekyll," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -86,35 +86,32 @@
 
 <meta name="description" content="目录
 
-系统版本
-
-
-安装ruby
-安装jekyll
-参考">
+准备工作
+安装软件
+保存镜像
+使用镜像
+注意事项">
 <meta property="og:type" content="article">
-<meta property="og:title" content="jekyll">
-<meta property="og:url" content="http://zhaoa.tk/2016/12/01/jekyll-install/index.html">
+<meta property="og:title" content="docker+ssh">
+<meta property="og:url" content="http://zhaoa.tk/2017/01/04/docker-ssh/index.html">
 <meta property="og:site_name" content="WalterZhao">
 <meta property="og:description" content="目录
 
-系统版本
-
-
-安装ruby
-安装jekyll
-参考">
-<meta property="og:updated_time" content="2016-12-02T03:34:37.000Z">
+准备工作
+安装软件
+保存镜像
+使用镜像
+注意事项">
+<meta property="og:updated_time" content="2017-01-04T09:20:21.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="jekyll">
+<meta name="twitter:title" content="docker+ssh">
 <meta name="twitter:description" content="目录
 
-系统版本
-
-
-安装ruby
-安装jekyll
-参考">
+准备工作
+安装软件
+保存镜像
+使用镜像
+注意事项">
 
 
 
@@ -142,13 +139,13 @@
 
 
 
-  <link rel="canonical" href="http://zhaoa.tk/2016/12/01/jekyll-install/"/>
+  <link rel="canonical" href="http://zhaoa.tk/2017/01/04/docker-ssh/"/>
 
 
 
 
 
-  <title> jekyll | WalterZhao </title>
+  <title> docker+ssh | WalterZhao </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -312,7 +309,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://zhaoa.tk/2016/12/01/jekyll-install/">
+  <link itemprop="mainEntityOfPage" href="http://zhaoa.tk/2017/01/04/docker-ssh/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="zhaoA">
@@ -336,7 +333,7 @@
             
             
               
-                jekyll
+                docker+ssh
               
             
           </h1>
@@ -349,8 +346,8 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-12-01T19:48:23+08:00">
-                2016-12-01
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-01-04T16:19:25+08:00">
+                2017-01-04
               </time>
             
 
@@ -360,31 +357,13 @@
           </span>
 
           
-            <span class="post-category" >
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/软件安装/" itemprop="url" rel="index">
-                    <span itemprop="name">软件安装</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
 
           
             
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
-                <a href="/2016/12/01/jekyll-install/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/01/jekyll-install/" itemprop="commentCount"></span>
+                <a href="/2017/01/04/docker-ssh/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/01/04/docker-ssh/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -412,48 +391,55 @@
       
         <p>目录</p>
 <ol>
-<li>系统版本</li>
+<li>准备工作</li>
+<li>安装软件</li>
+<li>保存镜像</li>
+<li>使用镜像</li>
+<li>注意事项</li>
 </ol>
-<ul>
-<li>安装ruby</li>
-<li>安装jekyll</li>
-<li>参考</li>
-</ul>
 <a id="more"></a>
-<h2 id="系统版本"><a href="#系统版本" class="headerlink" title="系统版本"></a>系统版本</h2><pre><code>$ cat /etc/issue
-Ubuntu 14.04.4 LTS \n \l
-
-$ uname -a
-Linux ubuntu 4.2.0-27-generic #32~14.04.1-Ubuntu SMP Fri Jan 22 15:32:26 UTC 2016 x86_64 x86_64 x86_64 GNU/Linux
-</code></pre><h2 id="安装ruby"><a href="#安装ruby" class="headerlink" title="安装ruby"></a>安装ruby</h2><p>ruby在ubuntu下默认不安装的，可以有两种方式安装。</p>
-<h3 id="1-使用ubuntu系统软件安装命令"><a href="#1-使用ubuntu系统软件安装命令" class="headerlink" title="1 使用ubuntu系统软件安装命令"></a>1 使用ubuntu系统软件安装命令</h3><pre><code>$sudo apt-get install ruby
-</code></pre><p>但该命令安装的ruby版本相对较老，而是1.9版本，而2.0以后版本才可以使用Jekyll3。</p>
-<h3 id="2-使用ruby版本管理器rvm安装。首先需要安装gem（用apt-get）"><a href="#2-使用ruby版本管理器rvm安装。首先需要安装gem（用apt-get）" class="headerlink" title="2 使用ruby版本管理器rvm安装。首先需要安装gem（用apt-get）"></a>2 使用ruby版本管理器rvm安装。首先需要安装gem（用apt-get）</h3><pre><code>$ gem sources --remove https://rubygems.org/
-$ gem sources --remove http://rubygems.org/
-$ gem sources -a https://ruby.taobao.org/
-$ gem sources -l
-\*** CURRENT SOURCES ***
-
-https://ruby.taobao.org
-# 请确保只有 ruby.taobao.org，这是一个比较快的镜像
-</code></pre><h3 id="安装rvm和ruby"><a href="#安装rvm和ruby" class="headerlink" title="安装rvm和ruby"></a>安装rvm和ruby</h3><pre><code>$ sudo apt-get install curl
-$ sudo gem install rvm
-$ rvm -v
-$ \curl -sSL https://get.rvm.io | bash
-$ source /home/user/.rvm/scripts/rvm
-$ rvm install ruby-2.3.3
-$ rvm use ruby-2.3.3
-$ rvm -v
-</code></pre><p>安装ruby前可以通过<strong>rvm list known</strong>查看可安装版本，选择较新的版本。安装ruby可能会出现问题问题，主要原因是  Ruby Rvm apt-get update 错误，错误代码：</p>
-<pre><code>Error running &apos;requirements_debian_update_system ruby-2.3.3&apos;...
-</code></pre><p>解决方法：在运行<strong>rvm install 2.3.3</strong>之前先运行<strong>rvm autolibs disable</strong></p>
-<h2 id="安装Jekyll"><a href="#安装Jekyll" class="headerlink" title="安装Jekyll"></a>安装Jekyll</h2><h3 id="安装js-runtime"><a href="#安装js-runtime" class="headerlink" title="安装js runtime"></a>安装js runtime</h3><pre><code>$ sudo apt-get install nodejs
-$ gem install execjs
-</code></pre><h3 id="安装jekyll"><a href="#安装jekyll" class="headerlink" title="安装jekyll"></a>安装jekyll</h3><pre><code>$gem install jekyll
-$jekyll -v
-$ gem install rdiscount
-</code></pre><p> 此处默认安装的是jekyll3版本，此版本需要ruby2.0.0以上版本。Jekyll默认的markdown解析器maruku对中文支持不够完善，换成RDiscount解析器。</p>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="http://verynix.com/ubuntu1204-install-jekyll.html" target="_blank" rel="external">ubuntu 12.04安装jekyll</a><br><a href="http://www.jianshu.com/p/1260517bbedb" target="_blank" rel="external">在github上写博客</a><br><a href="http://www.tuicool.com/articles/BVVBvu" target="_blank" rel="external">使用 GitHub, Jekyll 打造自己的独立博客</a></p>
+<h2 id="1-准备工作"><a href="#1-准备工作" class="headerlink" title="1.准备工作"></a>1.准备工作</h2><p>使用ubuntu:14.04镜像创建一个容器</p>
+<pre><code>$sudo docker run -it ubuntu:14.04 /bin/bash
+</code></pre><p>因为ubuntu镜像被裁剪过，其中只有部分基本的常用指令，是没有ssh服务的，因此需要安装ssh服务。</p>
+<h2 id="2-安装软件"><a href="#2-安装软件" class="headerlink" title="2.安装软件"></a>2.安装软件</h2><h3 id="2-1更新软件源"><a href="#2-1更新软件源" class="headerlink" title="2.1更新软件源"></a>2.1更新软件源</h3><p>使用<code>apt-get update</code>来更新软件源信息。但由于ubuntu官方的网址在国内比较慢，因此可以替换为国内163镜像源。<br>在容器内创建<code>/etc/apt/sources.list.d/163.list</code>文件，并添加下述内容：</p>
+<p>deb <a href="http://mirrors.163.com/ubuntu/" target="_blank" rel="external">http://mirrors.163.com/ubuntu/</a> vivid main restricted universe multiverse<br>deb <a href="http://mirrors.163.com/ubuntu/" target="_blank" rel="external">http://mirrors.163.com/ubuntu/</a> vivid-security main restricted universe multiverse<br>deb <a href="http://mirrors.163.com/ubuntu/" target="_blank" rel="external">http://mirrors.163.com/ubuntu/</a> vivid-updates main restricted universe multiverse<br>deb <a href="http://mirrors.163.com/ubuntu/" target="_blank" rel="external">http://mirrors.163.com/ubuntu/</a> vivid-proposed main restricted universe multiverse<br>deb <a href="http://mirrors.163.com/ubuntu/" target="_blank" rel="external">http://mirrors.163.com/ubuntu/</a> vivid-backports main restricted universe multiverse<br>deb-src <a href="http://mirrors.163.com/ubuntu/" target="_blank" rel="external">http://mirrors.163.com/ubuntu/</a> vivid main restricted universe multiverse<br>deb-src <a href="http://mirrors.163.com/ubuntu/" target="_blank" rel="external">http://mirrors.163.com/ubuntu/</a> vivid-security main restricted universe multiverse<br>deb-src <a href="http://mirrors.163.com/ubuntu/" target="_blank" rel="external">http://mirrors.163.com/ubuntu/</a> vivid-updates main restricted universe multiverse<br>deb-src <a href="http://mirrors.163.com/ubuntu/" target="_blank" rel="external">http://mirrors.163.com/ubuntu/</a> vivid-proposed main restricted universe multiverse<br>deb-src <a href="http://mirrors.163.com/ubuntu/" target="_blank" rel="external">http://mirrors.163.com/ubuntu/</a> vivid-backports main restricted universe multiverse</p>
+<p>然后修改<code>/etc/apt/sources.list</code>文件，修改其名称，以防止还会连接ubuntu官方源。<br>最后，重新执行<code>apt-get update</code></p>
+<h3 id="2-2安装和配置SSH服务"><a href="#2-2安装和配置SSH服务" class="headerlink" title="2.2安装和配置SSH服务"></a>2.2安装和配置SSH服务</h3><p>安装openssh-server</p>
+<pre><code>apt-get install opensh-server #安装ssh服务
+mkdir -p /var/run/sshd #运行ssh服务需要该目录存在
+/usr/sbin/sshd -D &amp; #后台运行该服务，必须以绝对路径启动
+</code></pre><p>在使用netstat前得安装net-tools</p>
+<pre><code>apt-get install net-tools
+</code></pre><p>然后使用<code>netstat -tunlp</code>查看容器的22端口（SSH服务默认监听端口）是否处于鉴定状态。<br>修改SSH服务的安全登录配置，取消pam登录限制</p>
+<pre><code>sed -ri &apos;s/session required pam_loginuid.so/#session required pam_loginuid.so/g&apos; /etc/pam.d/sshd #sed的&apos;s/ / /g&apos;是用来进行文本替换，本指令是将/etc/pam.d/sshd文件中的某一行注释掉
+</code></pre><h3 id="2-3修改authorized-keys文件"><a href="#2-3修改authorized-keys文件" class="headerlink" title="2.3修改authorized_keys文件"></a>2.3修改authorized_keys文件</h3><p>在root目录下创建.ssh目录，并复制需要登录的公钥信息（在其他机器用户目录的.ssh/id_rsa.pub文件中，可以通过ssh-kegen -t rsa生成），到authorized_keys文件中。</p>
+<pre><code>mkdir root/.ssh
+vim /root/.ssh/authorized_keys
+</code></pre><p>在根目录下创建run.sh脚本文件，用来自动启动SSH服务</p>
+<pre><code>cat&gt;run.sh&lt;&lt;EOF
+&gt;#!/bin/bash
+&gt;/usr/sbin/sshd -D
+&gt;EOF
+</code></pre><p>最后退出容器即可。</p>
+<h2 id="3-保存镜像"><a href="#3-保存镜像" class="headerlink" title="3.保存镜像"></a>3.保存镜像</h2><pre><code>$ sudo docker commit &lt;容器名&gt; &lt;保存为的镜像名，如sshd:ubuntu&gt;
+</code></pre><h2 id="4-使用镜像"><a href="#4-使用镜像" class="headerlink" title="4.使用镜像"></a>4.使用镜像</h2><p>启动容器，并添加端口映射10022–&gt;22。其中10022时宿主主机的端口，22是容器的端口</p>
+<pre><code>$ sudo docker run -p 10022:22 sshd:ubuntu /run.sh
+</code></pre><p>查看容器运行信息</p>
+<pre><code>$ sudo docker ps
+</code></pre><p>在容器外部，就可以通过ssh访问容器了。例如在宿主机上</p>
+<pre><code>$ ssh root@127.0.0.1 -p 10022 #以root用户登录
+</code></pre><h2 id="5-注意事项"><a href="#5-注意事项" class="headerlink" title="5.注意事项"></a>5.注意事项</h2><p>问题主要出现在在容器外部用ssh登录时，即验证密钥的阶段</p>
+<h3 id="5-1ermission-denied-publickey-password"><a href="#5-1ermission-denied-publickey-password" class="headerlink" title="5.1ermission denied (publickey,password)."></a>5.1ermission denied (publickey,password).</h3><p>如果不指定使用哪个用户名登录，ssh默认会采用你在宿主机登录的用户名进行登录，如果此时docker容器中并没有相应的用户名或者其用户目录下的authorized_keys文件并没有被设置正确，会出现密钥验证失败，需要输入密码的情况。</p>
+<pre><code>Permission denied (publickey,password).
+</code></pre><p>通过使用<code>ssh -v</code>指令显示连接时的详细过程，进行判断</p>
+<h3 id="5-2Connection-refused"><a href="#5-2Connection-refused" class="headerlink" title="5.2Connection refused"></a>5.2Connection refused</h3><p>没有打开ssh服务。使用<code>ps -e | grep ssh</code>查看。<br>手动操作开启/关闭ssh服务相关命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">sudo service ssh start #手动启动服务</div><div class="line">sudo service ssh stop #手动关闭服务</div><div class="line">sudo service ssh status #查询服务状态</div></pre></td></tr></table></figure>
+<h3 id="5-3"><a href="#5-3" class="headerlink" title="5.3"></a>5.3</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@</div><div class="line"></div><div class="line">@ WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED! @</div><div class="line"></div><div class="line">@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@</div><div class="line"></div><div class="line">IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!</div><div class="line"></div><div class="line">Someone could be eavesdropping on you right now (man-in-the-middle attack)!</div><div class="line"></div><div class="line">It is also possible that the RSA host key has just been changed.</div></pre></td></tr></table></figure>
+<p>这种情况发生在server端密码或是其他发生改变的时候。一般就需要删除~/.ssh/known_hosts的东西，然后再登录即可</p>
+<h3 id="5-4Agent-admitted-failure-to-sign-using-the-key"><a href="#5-4Agent-admitted-failure-to-sign-using-the-key" class="headerlink" title="5.4Agent admitted failure to sign using the key"></a>5.4Agent admitted failure to sign using the key</h3><p>解決方式 使用 ssh-add 指令将私钥 加进来 （根据个人的密匙命名不同更改 id_rsa）</p>
+<pre><code>ssh-add   ~/.ssh/id_rsa 
+</code></pre><h3 id="5-5权限问题"><a href="#5-5权限问题" class="headerlink" title="5.5权限问题"></a>5.5权限问题</h3><p>authorized_keys权限一般为600，.ssh文件夹的权限一般为700</p>
+<h3 id="5-6其他问题"><a href="#5-6其他问题" class="headerlink" title="5.6其他问题"></a>5.6其他问题</h3><p>在ssh权限中，需要针对需要设置<strong>/etc/pam.d/sshd</strong>和<strong>/etc/ssh/sshd_config</strong>文件，后续自行参考其他资料。</p>
 
       
     </div>
@@ -475,26 +461,20 @@ $ gem install rdiscount
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/jekyll/" rel="tag"># jekyll</a>
-          
-        </div>
-      
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/12/01/opengrok-install/" rel="next" title="opengrok_install">
+                <i class="fa fa-chevron-left"></i> opengrok_install
+              </a>
             
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/12/01/Hexo-githubpages/" rel="prev" title="Hexo+githubpages">
-                Hexo+githubpages <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -520,8 +500,8 @@ $ gem install rdiscount
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/12/01/jekyll-install/"
-           data-title="jekyll" data-url="http://zhaoa.tk/2016/12/01/jekyll-install/">
+      <div class="ds-thread" data-thread-key="2017/01/04/docker-ssh/"
+           data-title="docker+ssh" data-url="http://zhaoa.tk/2017/01/04/docker-ssh/">
       </div>
     
   </div>
@@ -618,7 +598,7 @@ $ gem install rdiscount
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#系统版本"><span class="nav-number">1.</span> <span class="nav-text">系统版本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装ruby"><span class="nav-number">2.</span> <span class="nav-text">安装ruby</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-使用ubuntu系统软件安装命令"><span class="nav-number">2.1.</span> <span class="nav-text">1 使用ubuntu系统软件安装命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-使用ruby版本管理器rvm安装。首先需要安装gem（用apt-get）"><span class="nav-number">2.2.</span> <span class="nav-text">2 使用ruby版本管理器rvm安装。首先需要安装gem（用apt-get）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装rvm和ruby"><span class="nav-number">2.3.</span> <span class="nav-text">安装rvm和ruby</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装Jekyll"><span class="nav-number">3.</span> <span class="nav-text">安装Jekyll</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装js-runtime"><span class="nav-number">3.1.</span> <span class="nav-text">安装js runtime</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装jekyll"><span class="nav-number">3.2.</span> <span class="nav-text">安装jekyll</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考"><span class="nav-number">4.</span> <span class="nav-text">参考</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-准备工作"><span class="nav-number">1.</span> <span class="nav-text">1.准备工作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-安装软件"><span class="nav-number">2.</span> <span class="nav-text">2.安装软件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1更新软件源"><span class="nav-number">2.1.</span> <span class="nav-text">2.1更新软件源</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2安装和配置SSH服务"><span class="nav-number">2.2.</span> <span class="nav-text">2.2安装和配置SSH服务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3修改authorized-keys文件"><span class="nav-number">2.3.</span> <span class="nav-text">2.3修改authorized_keys文件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-保存镜像"><span class="nav-number">3.</span> <span class="nav-text">3.保存镜像</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-使用镜像"><span class="nav-number">4.</span> <span class="nav-text">4.使用镜像</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-注意事项"><span class="nav-number">5.</span> <span class="nav-text">5.注意事项</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1ermission-denied-publickey-password"><span class="nav-number">5.1.</span> <span class="nav-text">5.1ermission denied (publickey,password).</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-2Connection-refused"><span class="nav-number">5.2.</span> <span class="nav-text">5.2Connection refused</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-3"><span class="nav-number">5.3.</span> <span class="nav-text">5.3</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-4Agent-admitted-failure-to-sign-using-the-key"><span class="nav-number">5.4.</span> <span class="nav-text">5.4Agent admitted failure to sign using the key</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-5权限问题"><span class="nav-number">5.5.</span> <span class="nav-text">5.5权限问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-6其他问题"><span class="nav-number">5.6.</span> <span class="nav-text">5.6其他问题</span></a></li></ol></li></ol></div>
             
 
           </div>
